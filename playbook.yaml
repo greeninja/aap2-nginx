@@ -1,0 +1,14 @@
+---
+
+- name: Install Nginx
+  hosts: all
+  gather_facts: true
+  tasks:
+    - name: Install Epel
+      package:
+        name: epel-release
+        state: installed
+    - name: Install Nginx
+      package:
+        name: nginx
+        state: installed
